@@ -1,0 +1,21 @@
+# Arquivos internos de desenvolvimento local
+docker/
+docker-compose.yml
+preview/
+*.tar.gz
+.env
+
+# Runtime e configuração sensível do GLPI
+glpi/config/config_db.php
+glpi/config/config_db_slave.php
+glpi/config/*.key
+glpi/config/*.pem
+glpi/config/*.pub
+glpi/files/_cache/*
+!glpi/files/_cache/.gitkeep
+glpi/files/_log/*
+!glpi/files/_log/.gitkeep
+glpi/files/_sessions/*
+!glpi/files/_sessions/.gitkeep
+glpi/files/_tmp/*
+!glpi/files/_tmp/.gitkeep

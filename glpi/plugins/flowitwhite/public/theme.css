@@ -1,0 +1,246 @@
+/* ==========================================================================
+   FLOWIT THEME - DESIGN SYSTEM LOVABLE (DASHBOARD SUPORTE)
+   Aplica a identidade visual exata do Lovable a todo o GLPI
+   ========================================================================== */
+
+body, html {
+  font-family: var(--font-family-base) !important;
+  background: var(--dashboard-bg) !important;
+  color: var(--dashboard-ink) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.central, body.helpdesk, body #page, body.page-anonymous {
+  background-color: var(--dashboard-bg) !important;
+  color: var(--dashboard-ink) !important;
+  --tblr-body-bg: var(--dashboard-bg) !important;
+  --tblr-body-color: var(--dashboard-ink) !important;
+  --tblr-border-color: var(--dashboard-line) !important;
+  --tblr-font-sans-serif: var(--font-family-base) !important;
+}
+
+/* 1. CABEÇALHO SUPERIOR (Header) */
+body .page > header[data-testid="main-header"],
+body header.navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--dashboard-line) !important;
+  box-shadow: none !important;
+  padding: 10px 20px !important;
+}
+
+/* 2. BARRA LATERAL (Sidebar / Navigation) */
+body .page > aside.sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid var(--dashboard-line) !important;
+  box-shadow: none !important;
+}
+
+body .sidebar #navbar-menu .nav-link {
+  color: var(--dashboard-muted) !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  border-radius: 8px !important;
+  margin: 3px 8px !important;
+  padding: 8px 12px !important;
+  transition: all 0.15s ease !important;
+}
+
+body .sidebar #navbar-menu .nav-link:hover {
+  background: var(--dashboard-bg) !important;
+  color: var(--dashboard-ink) !important;
+}
+
+body .sidebar #navbar-menu .nav-link.active,
+body .sidebar #navbar-menu .nav-item.active > .nav-link {
+  background: var(--flowit-selection) !important;
+  color: var(--flowit-selection-text) !important;
+  font-weight: 700 !important;
+  box-shadow: inset 3px 0 var(--dashboard-purple) !important;
+}
+
+body .sidebar #navbar-menu .nav-link.active .nav-link-icon,
+body .sidebar #navbar-menu .nav-item.active > .nav-link .nav-link-icon {
+  color: var(--dashboard-purple) !important;
+}
+
+/* Dropdown Menu da Sidebar */
+body .sidebar #navbar-menu .dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid var(--dashboard-line) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--dashboard-shadow) !important;
+  padding: 6px !important;
+}
+
+body .sidebar #navbar-menu .dropdown-item {
+  color: var(--dashboard-ink) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+}
+
+body .sidebar #navbar-menu .dropdown-item:hover {
+  background: var(--flowit-selection) !important;
+  color: var(--flowit-selection-text) !important;
+}
+
+/* 3. TODOS OS CARDS E CONTAINERS (GLPI Core, Central, Tickets, Dashboards) */
+body #page .card,
+.dashboard .card,
+.grid-stack-item-content {
+  background: var(--dashboard-card) !important;
+  border: 1px solid var(--dashboard-line) !important;
+  border-radius: 14px !important;
+  box-shadow: var(--dashboard-shadow) !important;
+  transition: all 0.2s ease !important;
+}
+
+body #page .card:hover,
+.dashboard .card:hover {
+  border-color: #cbd5e1 !important;
+}
+
+body #page .card-header,
+.dashboard .card .card-header {
+  background: transparent !important;
+  border-bottom: 1px solid var(--dashboard-line) !important;
+  padding: 14px 18px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: var(--dashboard-ink) !important;
+}
+
+body #page .card-body {
+  padding: 18px !important;
+}
+
+/* 4. FORMULÁRIOS, INPUTS E SELECTS */
+body #page .form-control, 
+body #page .form-select,
+.select2-container--default .select2-selection--single {
+  background-color: #ffffff !important;
+  border: 1px solid var(--dashboard-line) !important;
+  border-radius: 10px !important;
+  color: var(--dashboard-ink) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+}
+
+body #page .form-control:focus, 
+body #page .form-select:focus,
+.select2-container--default.select2-container--open .select2-selection--single {
+  border-color: var(--dashboard-purple) !important;
+  box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.15) !important;
+  outline: none !important;
+}
+
+/* 5. TABELAS (GLPI Ticket List, Asset List, Search) */
+table.tab_cadre,
+table.tab_cadre_fixehov,
+table.table,
+.table.table-vcenter {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--dashboard-line) !important;
+  box-shadow: var(--dashboard-shadow) !important;
+}
+
+table.tab_cadre th,
+table.tab_cadre_fixehov th,
+table.table th,
+.table.table-vcenter th {
+  background: #fafbfd !important;
+  color: var(--dashboard-muted) !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 10px 14px !important;
+  border-bottom: 1px solid var(--dashboard-line) !important;
+}
+
+table.tab_cadre td,
+table.tab_cadre_fixehov td,
+table.table td,
+.table.table-vcenter td {
+  padding: 12px 14px !important;
+  color: var(--dashboard-ink) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid #f5f7fb !important;
+  vertical-align: middle !important;
+}
+
+table.tab_cadre_fixehov tr:hover td,
+table.table tr:hover td,
+.table.table-vcenter tr:hover td {
+  background-color: #fafbfd !important;
+}
+
+/* 6. BOTÕES DO SISTEMA */
+body #page .btn-primary,
+.btn.btn-primary {
+  background: var(--dashboard-purple) !important;
+  border-color: var(--dashboard-purple) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(123, 92, 255, 0.2) !important;
+}
+
+body #page .btn-primary:hover,
+.btn.btn-primary:hover {
+  background: #6848f0 !important;
+  border-color: #6848f0 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 7. BADGES DE STATUS (CHAMADOS E ATIVOS) */
+.badge {
+  border-radius: 999px !important;
+  padding: 4px 10px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+/* Badge N2 / N3 Lovable */
+td.badge-cell span, .badge-level-n2, .badge-level-n3 {
+  background: #f1edff !important;
+  color: #6248d8 !important;
+  border-radius: 999px !important;
+  padding: 4px 8px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+.warn {
+  color: var(--dashboard-red) !important;
+  font-weight: 700 !important;
+}
+
+/* 8. ABAS (Tabs) DO GLPI */
+.nav-tabs {
+  border-bottom: 1px solid var(--dashboard-line) !important;
+}
+
+.nav-tabs .nav-link {
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: var(--dashboard-muted) !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  padding: 12px 18px !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--dashboard-purple) !important;
+  border-bottom-color: var(--dashboard-purple) !important;
+  background: transparent !important;
+}

@@ -1,0 +1,17 @@
+/* Ativado somente quando logo-flowit.png existir. PNG deve ter alpha real.
+   Sem filter, blend-mode ou máscara; mantém as cores originais da marca. */
+body .navbar-brand .glpi-logo {
+  background-image: url('logo-flowit.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 172px;
+  max-width: 100%;
+  height: 56px;
+}
+body.navbar-collapsed .sidebar .navbar-brand .glpi-logo {
+  width: 40px;
+  height: 40px;
+}
+/* Para o menu recolhido, acrescente em custom.css o símbolo separado,
+   após fornecer o arquivo. Não recorta automaticamente o wordmark. */

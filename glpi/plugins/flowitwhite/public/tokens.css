@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* FlowIT Design System Tokens - 100% Fiel ao Lovable (Dashboard Suporte) */
+:root {
+  --font-family-base: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Cores Exatas do Lovable */
+  --dashboard-bg: #f5f7fb;
+  --dashboard-card: #ffffff;
+  --dashboard-ink: #172033;
+  --dashboard-muted: #6f7788;
+  --dashboard-line: #e7eaf0;
+  
+  --dashboard-purple: #7b5cff;
+  --dashboard-purple2: #a594ff;
+  --dashboard-blue: #3e8ef7;
+  --dashboard-teal: #22a699;
+  --dashboard-orange: #f59f45;
+  --dashboard-red: #e85d75;
+  --dashboard-green: #39a96b;
+  --dashboard-shadow: 0 8px 24px rgba(31, 42, 68, 0.07);
+
+  /* Variáveis GLPI mapeadas para o Lovable */
+  --flowit-background: var(--dashboard-bg);
+  --flowit-surface: var(--dashboard-card);
+  --flowit-surface-alt: #eef0f5;
+  --flowit-sidebar: #ffffff;
+  --flowit-header: #ffffff;
+  --flowit-text: var(--dashboard-ink);
+  --flowit-muted: var(--dashboard-muted);
+  --flowit-border: var(--dashboard-line);
+  --flowit-border-hover: #cbd5e1;
+
+  --flowit-primary: var(--dashboard-purple);
+  --flowit-primary-hover: #6848f0;
+  --flowit-selection: #f1edff;
+  --flowit-selection-text: #6248d8;
+  --flowit-hover: #f5f7fb;
+
+  --flowit-radius-sm: 8px;
+  --flowit-radius: 10px;
+  --flowit-radius-lg: 14px;
+  --flowit-shadow: var(--dashboard-shadow);
+}

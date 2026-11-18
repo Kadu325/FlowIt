@@ -1,0 +1,231 @@
+/* FlowIT Extended Theme — Estende o Design System para todas as páginas padrão do GLPI e Vault360
+ * Preserva 100% do backend, banco de dados, rotas e APIs do GLPI.
+ */
+
+:root,
+[data-bs-theme="light"] {
+  --tblr-primary: #7b5cff;
+  --tblr-primary-rgb: 123, 92, 255;
+  --tblr-primary-darken: #6848f0;
+  --tblr-link-color: #7b5cff;
+  --tblr-link-hover-color: #6848f0;
+  --tblr-body-bg: #f5f7fb;
+  --tblr-body-color: #172033;
+  --tblr-card-bg: #ffffff;
+  --tblr-border-color: #e7eaf0;
+  --tblr-muted: #6f7788;
+  --tblr-font-sans-serif: var(--font-family-base, 'Inter', sans-serif);
+
+  --bs-primary: #7b5cff;
+  --bs-primary-rgb: 123, 92, 255;
+  --bs-body-bg: #f5f7fb;
+  --bs-body-color: #172033;
+  --bs-border-color: #e7eaf0;
+}
+
+body {
+  font-family: var(--font-family-base, 'Inter', sans-serif);
+  background-color: var(--flowit-background, #f5f7fb);
+  color: var(--flowit-text, #172033);
+}
+
+.page-wrapper,
+.page-body {
+  background-color: var(--flowit-background, #f5f7fb);
+}
+
+/* Sidebar & Topbar */
+aside.navbar,
+.navbar-vertical,
+header.navbar {
+  background-color: var(--flowit-sidebar, #ffffff) !important;
+  border-color: var(--flowit-border, #e7eaf0) !important;
+}
+
+.navbar-nav .nav-link {
+  border-radius: var(--flowit-radius, 10px);
+  color: var(--flowit-text, #172033);
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: var(--flowit-hover, #f5f7fb);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active > .nav-link {
+  background-color: var(--flowit-selection, #f1edff) !important;
+  color: var(--flowit-selection-text, #6248d8) !important;
+  font-weight: 600;
+}
+
+/* Cards & Painéis */
+.card,
+.glpi-card,
+.accordion-item,
+.modal-content {
+  background-color: var(--flowit-surface, #ffffff);
+  border: 1px solid var(--flowit-border, #e7eaf0);
+  border-radius: var(--flowit-radius-lg, 14px);
+  box-shadow: var(--flowit-shadow, 0 8px 24px rgba(31, 42, 68, 0.07));
+}
+
+.card-header,
+.modal-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--flowit-border, #e7eaf0);
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--flowit-text, #172033);
+}
+
+/* Tabelas de Listagem (Search, Tickets, Assets, Vault360) */
+.table,
+table.tab_cadre_fixehov,
+table.tab_cadre_fixe {
+  border-color: var(--flowit-border, #e7eaf0);
+}
+
+.table thead th,
+table.tab_cadre_fixehov th,
+table.tab_cadre_fixe th {
+  background-color: #fafbfd !important;
+  color: var(--flowit-muted, #6f7788) !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--flowit-border, #e7eaf0) !important;
+}
+
+.table tbody tr:hover td,
+table.tab_cadre_fixehov tbody tr:hover td {
+  background-color: #f9fafd !important;
+}
+
+/* Botões */
+.btn {
+  border-radius: var(--flowit-radius, 10px);
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+  background-color: var(--flowit-primary, #7b5cff) !important;
+  border-color: var(--flowit-primary, #7b5cff) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--flowit-primary-hover, #6848f0) !important;
+  border-color: var(--flowit-primary-hover, #6848f0) !important;
+}
+
+.btn-outline-primary {
+  color: var(--flowit-primary, #7b5cff) !important;
+  border-color: var(--flowit-primary, #7b5cff) !important;
+}
+
+/* Inputs, Selects e Select2 */
+.form-control,
+.form-select,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border: 1px solid var(--flowit-border, #e7eaf0);
+  border-radius: var(--flowit-radius-sm, 8px);
+  color: var(--flowit-text, #172033);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--flowit-primary, #7b5cff);
+  box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.14);
+}
+
+/* Abas (Tabs) */
+.nav-tabs .nav-link {
+  color: var(--flowit-muted, #6f7788);
+  font-weight: 500;
+  border-radius: var(--flowit-radius-sm, 8px) var(--flowit-radius-sm, 8px) 0 0;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--flowit-primary, #7b5cff) !important;
+  border-color: var(--flowit-border, #e7eaf0) var(--flowit-border, #e7eaf0) #ffffff;
+  font-weight: 600;
+}
+
+/* Paginação */
+.pagination .page-item.active .page-link {
+  background-color: var(--flowit-primary, #7b5cff);
+  border-color: var(--flowit-primary, #7b5cff);
+  color: #ffffff;
+}
+
+.pagination .page-link {
+  color: var(--flowit-text, #172033);
+  border-color: var(--flowit-border, #e7eaf0);
+  border-radius: var(--flowit-radius-sm, 8px);
+  margin: 0 2px;
+}
+
+/* Timeline ITIL (Chamados / Problemas / Mudanças) */
+.itil-timeline .timeline-item .timeline-content,
+.itil-object .card {
+  border-radius: var(--flowit-radius, 10px);
+  border-color: var(--flowit-border, #e7eaf0);
+}
+
+/* Remove a ponta/seta residual do balão da timeline do GLPI */
+.itil-timeline .timeline-item .timeline-content::before,
+.itil-timeline .timeline-item .timeline-content::after,
+.itil-timeline .timeline-item .card::before,
+.itil-timeline .timeline-item .card::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Dashboard GLPI — Ajuste de encaixe dos cards Big Number */
+.dashboard .grid-stack-item-content .card.big-number,
+.dashboard .card.big-number {
+  padding: 12px 14px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dashboard .card.big-number .content,
+.dashboard .card.big-number .card-body {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard .card.big-number .number {
+  font-size: clamp(1.35rem, 2.1vw, 1.95rem) !important;
+  line-height: 1.1 !important;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard .card.big-number .label {
+  font-size: 0.72rem !important;
+  line-height: 1.2 !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--flowit-muted, #6f7788);
+}
+

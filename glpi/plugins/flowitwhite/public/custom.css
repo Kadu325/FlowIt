@@ -1,0 +1,1035 @@
+/* FlowIT v2.0 - Customizações e Badges Semânticas */
+.badge-status-1, .badge-status-open {
+  background-color: var(--flowit-status-open-bg) !important;
+  color: var(--flowit-status-open-text) !important;
+  border-radius: var(--flowit-radius-sm);
+  font-weight: 600;
+}
+.badge-status-2, .badge-status-4, .badge-status-progress {
+  background-color: var(--flowit-status-progress-bg) !important;
+  color: var(--flowit-status-progress-text) !important;
+  border-radius: var(--flowit-radius-sm);
+  font-weight: 600;
+}
+.badge-status-5, .badge-status-resolved {
+  background-color: var(--flowit-status-resolved-bg) !important;
+  color: var(--flowit-status-resolved-text) !important;
+  border-radius: var(--flowit-radius-sm);
+  font-weight: 600;
+}
+.badge-status-6, .badge-status-closed {
+  background-color: var(--flowit-status-closed-bg) !important;
+  color: var(--flowit-status-closed-text) !important;
+  border-radius: var(--flowit-radius-sm);
+  font-weight: 600;
+}
+
+/* Polimento de superfícies e bordas */
+body #page .card {
+  border-radius: var(--flowit-radius);
+  border: 1px solid var(--flowit-border);
+  box-shadow: var(--flowit-shadow);
+}
+body #page .btn-primary {
+  background-color: var(--flowit-primary) !important;
+  border-color: var(--flowit-primary) !important;
+  color: var(--flowit-on-primary) !important;
+  border-radius: var(--flowit-radius-sm);
+}
+body #page .btn-primary:hover {
+  background-color: var(--flowit-primary-hover) !important;
+  border-color: var(--flowit-primary-hover) !important;
+}
+
+/* =========================================================================
+   FlowIT — Estilização do Menu Lateral (Opção 2: Azul Tecnológico Executivo)
+   Substituição do amarelo/laranja nativo por Azul Oceano (#006aa6)
+   ========================================================================= */
+:root {
+  --tblr-primary: #006aa6 !important;
+  --tblr-primary-rgb: 0, 106, 166 !important;
+}
+
+/* Itens de menu de 1º nível expandidos (.show) ou ativos (.active) */
+body .sidebar #navbar-menu .nav-item .nav-link.show,
+body .sidebar #navbar-menu .nav-item .nav-link.active,
+body .sidebar #navbar-menu .nav-item.active > .nav-link {
+  background-color: #f0f7fc !important;
+  color: #004e7c !important;
+  border-left: 3px solid #006aa6 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+/* Ícones dos itens expandidos/ativos */
+body .sidebar #navbar-menu .nav-item .nav-link.show i,
+body .sidebar #navbar-menu .nav-item .nav-link.active i,
+body .sidebar #navbar-menu .nav-item.active > .nav-link i {
+  color: #006aa6 !important;
+}
+
+/* Indicadores de seta/chevron do dropdown */
+body .sidebar #navbar-menu .nav-item .nav-link.dropdown-toggle.show::after,
+body .sidebar #navbar-menu .nav-item .nav-link.dropdown-toggle.active::after {
+  color: #006aa6 !important;
+}
+
+/* Hover suave nos itens do menu */
+body .sidebar #navbar-menu .nav-item .nav-link:hover {
+  background-color: #f4f8fb !important;
+  color: #004e7c !important;
+  border-left-color: #006aa6 !important;
+}
+
+body .sidebar #navbar-menu .nav-item .nav-link:hover i {
+  color: #006aa6 !important;
+}
+
+/* =========================================================================
+   Eliminação total do amarelo nos submenus nativos do GLPI (ex: Projetos)
+   ========================================================================= */
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item,
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item:visited {
+  color: var(--flowit-text, #17212b) !important;
+  background-color: transparent !important;
+  border-left: 3px solid transparent !important;
+}
+
+/* Item filho com foco ou ativo */
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item.active,
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item[aria-current="page"] {
+  background-color: #f0f7fc !important;
+  color: #004e7c !important;
+  border-left: 3px solid #006aa6 !important;
+  font-weight: 600 !important;
+}
+
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item.active i,
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item[aria-current="page"] i {
+  color: #006aa6 !important;
+}
+
+/* Hover nos itens filhos */
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item:hover {
+  background-color: #f4f8fb !important;
+  color: #004e7c !important;
+  border-left-color: #006aa6 !important;
+}
+
+body .sidebar #navbar-menu .dropdown-menu .dropdown-item:hover i {
+  color: #006aa6 !important;
+}
+
+/* =========================================================================
+   FlowIT Modern Dashboard Polishing & Soft Palette
+   ========================================================================= */
+
+/* 1. Ocultar banner de demonstração caso apareça no DOM */
+.placeholder_info,
+.dashboard .placeholder_info {
+  display: none !important;
+}
+
+/* 2. Container e GridStack */
+.dashboard {
+  background-color: transparent !important;
+}
+
+.dashboard .grid-stack-item-content {
+  border-radius: 12px !important;
+}
+
+.dashboard .card {
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.dashboard .card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px -2px rgba(0, 78, 124, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 3. Cards Big-Number e Contadores */
+.dashboard .card.big-number {
+  position: relative !important;
+  padding: 1.25rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+
+.dashboard .card.big-number .content {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.25rem !important;
+  font-family: inherit !important;
+}
+
+.dashboard .card.big-number .label {
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  opacity: 0.85 !important;
+}
+
+.dashboard .card.big-number .main-icon {
+  position: absolute !important;
+  right: 1.25rem !important;
+  bottom: 1rem !important;
+  font-size: 2.75rem !important;
+  opacity: 0.15 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  pointer-events: none !important;
+}
+
+.dashboard .card.big-number:hover .main-icon {
+  opacity: 0.25 !important;
+  transform: scale(1.08) !important;
+}
+
+/* 4. Suavização das cores berrantes/saturadas nos cards */
+/* Amarelos canários -> Fundo creme suave FlowIT com borda e texto bronze */
+.dashboard .card[style*="#ffd43b"],
+.dashboard .card[style*="#FFD43B"],
+.dashboard .card[style*="255, 212, 59"],
+.dashboard a.card.big-number[style*="#ffd43b"],
+.dashboard a.card.big-number[style*="#FFD43B"] {
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a !important;
+}
+
+.dashboard .card[style*="#ffd43b"] .content,
+.dashboard .card[style*="#FFD43B"] .content,
+.dashboard .card[style*="#ffd43b"] .label,
+.dashboard .card[style*="#FFD43B"] .label,
+.dashboard .card[style*="#ffd43b"] .main-icon,
+.dashboard .card[style*="#FFD43B"] .main-icon {
+  color: #92400e !important;
+}
+
+/* Laranja agressivo -> Pêssego suave FlowIT */
+.dashboard .card[style*="#fd7e14"],
+.dashboard .card[style*="#FD7E14"],
+.dashboard .card[style*="253, 126, 20"],
+.dashboard a.card.big-number[style*="#fd7e14"],
+.dashboard a.card.big-number[style*="#FD7E14"] {
+  background-color: #fff7ed !important;
+  color: #9a3412 !important;
+  border: 1px solid #ffedd5 !important;
+}
+
+.dashboard .card[style*="#fd7e14"] .content,
+.dashboard .card[style*="#FD7E14"] .content,
+.dashboard .card[style*="#fd7e14"] .label,
+.dashboard .card[style*="#FD7E14"] .label,
+.dashboard .card[style*="#fd7e14"] .main-icon,
+.dashboard .card[style*="#FD7E14"] .main-icon {
+  color: #9a3412 !important;
+}
+
+/* Vermelho saturado -> Rosa suave FlowIT */
+.dashboard .card[style*="#fa5252"],
+.dashboard .card[style*="#FA5252"],
+.dashboard .card[style*="250, 82, 82"],
+.dashboard a.card.big-number[style*="#fa5252"],
+.dashboard a.card.big-number[style*="#FA5252"] {
+  background-color: #fef2f2 !important;
+  color: #991b1b !important;
+  border: 1px solid #fecaca !important;
+}
+
+.dashboard .card[style*="#fa5252"] .content,
+.dashboard .card[style*="#FA5252"] .content,
+.dashboard .card[style*="#fa5252"] .label,
+.dashboard .card[style*="#FA5252"] .label,
+.dashboard .card[style*="#fa5252"] .main-icon,
+.dashboard .card[style*="#FA5252"] .main-icon {
+  color: #991b1b !important;
+}
+
+/* Verde limão -> Fundo menta suave FlowIT */
+.dashboard .card[style*="#40c057"],
+.dashboard .card[style*="#40C057"],
+.dashboard .card[style*="64, 192, 87"],
+.dashboard a.card.big-number[style*="#40c057"],
+.dashboard a.card.big-number[style*="#40C057"] {
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+.dashboard .card[style*="#40c057"] .content,
+.dashboard .card[style*="#40C057"] .content,
+.dashboard .card[style*="#40c057"] .label,
+.dashboard .card[style*="#40C057"] .label,
+.dashboard .card[style*="#40c057"] .main-icon,
+.dashboard .card[style*="#40C057"] .main-icon {
+  color: #166534 !important;
+}
+
+/* Azul padrão -> Azul FlowIT suave */
+.dashboard .card[style*="#228be6"],
+.dashboard .card[style*="#228BE6"],
+.dashboard .card[style*="34, 139, 230"],
+.dashboard a.card.big-number[style*="#228be6"],
+.dashboard a.card.big-number[style*="#228BE6"] {
+  background-color: #f0f7fc !important;
+  color: #004e7c !important;
+  border: 1px solid #bae6fd !important;
+}
+
+.dashboard .card[style*="#228be6"] .content,
+.dashboard .card[style*="#228BE6"] .content,
+.dashboard .card[style*="#228be6"] .label,
+.dashboard .card[style*="#228BE6"] .label,
+.dashboard .card[style*="#228be6"] .main-icon,
+.dashboard .card[style*="#228BE6"] .main-icon {
+  color: #006aa6 !important;
+}
+
+/* 5. Gráficos do Dashboard */
+.dashboard .card.g-chart {
+  background-color: #ffffff !important;
+  padding: 1.25rem !important;
+}
+
+.dashboard .card.g-chart .main-label {
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  font-size: 0.9375rem !important;
+}
+
+.dashboard .card.g-chart .main-icon {
+  color: #94a3b8 !important;
+  opacity: 0.25 !important;
+}
+
+/* =========================================================================
+   FlowIT Modern Login Page Experience with Custom Background
+   ========================================================================= */
+
+/* Fundo da tela inteira com a imagem de escritório e overlay suave */
+body.page-anonymous,
+body:has(#page.page-anonymous) {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(0, 106, 166, 0.35) 100%),
+              url('login-bg.jpg') center center / cover no-repeat fixed !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#page.page-anonymous {
+  width: 100% !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+}
+
+#page.page-anonymous .flex-fill {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+/* Container Centralizado */
+#page.page-anonymous .container-tight {
+  max-width: 480px !important;
+  width: 100% !important;
+  padding: 24px 20px !important;
+  margin: auto !important;
+}
+
+/* LOGO FLOWIT EXCLUSIVO - Elimina o logo GLPI sobreposto */
+.page-anonymous .glpi-logo,
+#page.page-anonymous .glpi-logo,
+.page-anonymous span.glpi-logo {
+  --logo: none !important;
+  --glpi-logo-dark-login: none !important;
+  --glpi-logo-light-login: none !important;
+  content: none !important;
+  background-image: url('logo-flowit.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  width: 250px !important;
+  height: 72px !important;
+  display: inline-block !important;
+  margin-bottom: 24px !important;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.4)) !important;
+}
+
+/* Card Principal de Login com Efeito Glassmorphism Sofisticado */
+#page.page-anonymous .card.main-content-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.4) inset !important;
+  overflow: hidden !important;
+}
+
+/* Esconder apenas o header vazio do card raiz */
+#page.page-anonymous .card.main-content-card > .card-header {
+  display: none !important;
+}
+
+#page.page-anonymous .card-body {
+  padding: 36px 36px 32px 36px !important;
+}
+
+#page.page-anonymous .row.justify-content-center > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+/* Título e Subtítulo Dentro do Formulário */
+#page.page-anonymous form .card-header.mb-4 {
+  text-align: center !important;
+  margin-bottom: 24px !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+#page.page-anonymous form .card-header.mb-4 h2 {
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.025em !important;
+  margin-bottom: 6px !important;
+}
+
+#page.page-anonymous form .card-header.mb-4::after {
+  content: 'Faça login com sua conta Fazenda Progresso' !important;
+  display: block !important;
+  font-size: 0.875rem !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+  margin-top: 4px !important;
+}
+
+/* Labels dos Campos */
+#page.page-anonymous .form-label {
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Campos de Texto (Input) */
+#page.page-anonymous .form-control,
+#page.page-anonymous .form-select {
+  border-radius: 10px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  padding: 11px 14px !important;
+  font-size: 0.9375rem !important;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#page.page-anonymous .form-control:focus,
+#page.page-anonymous .form-select:focus {
+  border-color: #006aa6 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(0, 106, 166, 0.15) !important;
+  outline: none !important;
+}
+
+/* Select2 Dropdown de Origem de Login (AD Progresso) */
+#page.page-anonymous .select2-container .select2-selection--single {
+  height: 46px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background: #f8fafc !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-left: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+#page.page-anonymous .select2-container--open .select2-selection--single,
+#page.page-anonymous .select2-container--focus .select2-selection--single {
+  border-color: #006aa6 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(0, 106, 166, 0.15) !important;
+}
+
+#page.page-anonymous .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+#page.page-anonymous .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 44px !important;
+  right: 10px !important;
+}
+
+/* Checkbox Lembrar de mim */
+#page.page-anonymous .form-check {
+  margin-top: 12px !important;
+  margin-bottom: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#page.page-anonymous .form-check-label {
+  font-size: 0.84rem !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+}
+
+#page.page-anonymous .form-check-input {
+  cursor: pointer !important;
+  width: 1.15em !important;
+  height: 1.15em !important;
+  margin-top: 0 !important;
+  margin-right: 8px !important;
+}
+
+#page.page-anonymous .form-check-input:checked {
+  background-color: #006aa6 !important;
+  border-color: #006aa6 !important;
+}
+
+/* Botão Entrar / Sign In */
+#page.page-anonymous .form-footer button[type="submit"] {
+  background: linear-gradient(135deg, #006aa6 0%, #004e7c 100%) !important;
+  border: none !important;
+  border-radius: 11px !important;
+  padding: 13px 20px !important;
+  font-size: 0.975rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 16px rgba(0, 106, 166, 0.3) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+#page.page-anonymous .form-footer button[type="submit"]:hover {
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 8px 20px rgba(0, 106, 166, 0.45) !important;
+  background: linear-gradient(135deg, #0284c7 0%, #006aa6 100%) !important;
+}
+
+#page.page-anonymous .form-footer button[type="submit"]:active {
+  transform: translateY(0.5px) !important;
+}
+
+/* Rodapé Elegante com Contraste em Relação ao Fundo */
+#page.page-anonymous footer,
+#page.page-anonymous .copyright {
+  text-align: center !important;
+  font-size: 0.78rem !important;
+  color: #f1f5f9 !important;
+  margin-top: 24px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+#page.page-anonymous .copyright a {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  opacity: 0.9 !important;
+}
+
+#page.page-anonymous .copyright a:hover {
+  opacity: 1 !important;
+}
+
+/* =========================================================================
+   FlowIT — Correção de Layout nos Cards do Dashboard (Summary Numbers)
+   Corrige corte de texto nos cards de resumo de chamados
+   ========================================================================= */
+
+.dashboard .card.summary-numbers,
+.dashboard .card.multiple-numbers {
+  overflow: visible !important;
+}
+
+.dashboard .summary-numbers .scrollable,
+.dashboard .multiple-numbers .scrollable {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+.dashboard .summary-numbers .table,
+.dashboard .multiple-numbers .table {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  padding: 6px !important;
+}
+
+.dashboard .summary-numbers .table .line,
+.dashboard .multiple-numbers .table .line {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding: 12px 14px !important;
+  min-height: 86px !important;
+  border-radius: 10px !important;
+  overflow: visible !important;
+  position: relative !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  text-decoration: none !important;
+}
+
+.dashboard .summary-numbers .table .line:hover,
+.dashboard .multiple-numbers .table .line:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Número principal no card */
+.dashboard .summary-numbers .table .line .content,
+.dashboard .multiple-numbers .table .line .content {
+  font-size: 1.65rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 6px !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Rótulo / Nome do card (evita corte de texto) */
+.dashboard .summary-numbers .table .line .label,
+.dashboard .multiple-numbers .table .line .label {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  display: block !important;
+  max-width: 100% !important;
+  opacity: 0.9 !important;
+}
+
+/* Ícone de fundo transparente no card */
+.dashboard .summary-numbers .table .line .icon,
+.dashboard .multiple-numbers .table .line .icon {
+  position: absolute !important;
+  right: 10px !important;
+  top: 10px !important;
+  font-size: 1.75rem !important;
+  opacity: 0.22 !important;
+  pointer-events: none !important;
+}
+
+/* =========================================================================
+   FlowIT — Refatoração e Encapsulamento Perfeito do Mini Dashboard (.dashboard.mini)
+   ========================================================================= */
+
+/* 1. Reset e anulação de container queries nativos do GLPI 12 que forçam altura */
+@container mini-dashboard-grid (min-width: 100px) {
+  .grid-stack,
+  .dashboard.mini .grid-stack {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}
+
+/* Oculta guias ou travas residuais do gridstack nativo */
+.dashboard.mini .grid-guide,
+.dashboard.mini .lock-bottom,
+.dashboard.mini .grid-stack-item.lock-bottom,
+.dashboard.mini .glpi_logo {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* 2. Encapsulamento Estrito do Container Branco Externo */
+.card.dashboard-card,
+div.dashboard-card,
+.dashboard-card {
+  height: fit-content !important;
+  min-height: unset !important;
+  max-height: none !important;
+  align-self: flex-start !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  margin-bottom: 20px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Card Body: Padding simétrico e uniforme de 16px */
+.card.dashboard-card > .card-body,
+.dashboard-card .card-body,
+.card-body.p-2:has(.dashboard.mini) {
+  height: fit-content !important;
+  min-height: unset !important;
+  max-height: none !important;
+  padding: 16px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+/* Dashboard Mini Wrapper interno */
+.dashboard.mini,
+div.dashboard.mini {
+  height: fit-content !important;
+  min-height: unset !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Cabeçalho de Ações: Linha Dedicada Própria Acima dos Cards */
+.dashboard.mini > .toolbar,
+.dashboard.mini span.toolbar:not(.left-toolbar) {
+  position: static !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 24px !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  z-index: 10 !important;
+}
+
+.dashboard.mini > .toolbar .btn,
+.dashboard.mini > .toolbar i {
+  color: #64748b !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  padding: 4px !important;
+  border-radius: 6px !important;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.dashboard.mini > .toolbar .btn:hover,
+.dashboard.mini > .toolbar i:hover {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+/* 4. Grid dos 7 Cards: Dimensões Fixas e Altura Auto/Sem Resíduos */
+.dashboard.mini .grid-stack {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* Responsividade do Grid */
+@media (max-width: 1300px) {
+  .dashboard.mini .grid-stack {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard.mini .grid-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard.mini .grid-stack {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Itens da grade e seus conteúdos */
+.dashboard.mini .grid-stack > .grid-stack-item {
+  position: static !important;
+  width: 100% !important;
+  height: 94px !important;
+  min-height: 94px !important;
+  max-height: 94px !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  box-sizing: border-box !important;
+}
+
+.dashboard.mini .grid-stack-item-content {
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  overflow: visible !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 5. Estilo e Alinhamento Interno dos Cards (Intactos) */
+.dashboard.mini .card.big-number {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 94px !important;
+  max-height: 94px !important;
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  position: relative !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.dashboard.mini .card.big-number:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Padronização dos Números */
+.dashboard.mini .card.big-number .content,
+.dashboard.mini .card.big-number .formatted-number,
+.dashboard.mini .card.big-number .formatted-number .number,
+.dashboard.mini .card.big-number .formatted-number .suffix {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+}
+
+/* Prevenção de Quebra de Texto nos Rótulos */
+.dashboard.mini .card.big-number .label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0.9 !important;
+  hyphens: none !important;
+}
+
+/* Ícone no Canto Superior Direito */
+.dashboard.mini .card.big-number .main-icon {
+  position: absolute !important;
+  top: 10px !important;
+  right: 12px !important;
+  bottom: auto !important;
+  inset-inline-end: 12px !important;
+  font-size: 24px !important;
+  opacity: 0.22 !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Controles de edição do card (hover no modo edição) */
+.dashboard.mini .grid-stack-item .controls {
+  position: absolute !important;
+  top: 4px !important;
+  right: 4px !important;
+  z-index: 5 !important;
+}
+
+/* =========================================================================
+   FlowIT — Aumento e Legibilidade dos Números do Dashboard de Ativos
+   (/front/dashboard_assets.php e dashboards gerais)
+   ========================================================================= */
+
+/* 1. Cards Big-Number (Cartões de Contagem Simples) */
+.dashboard .card.big-number .formatted-number,
+.dashboard .card.big-number .formatted-number .number,
+.dashboard .card.big-number .formatted-number .suffix,
+.dashboard .card.big-number .content,
+.dashboard .card.big-number .content .number {
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.03em !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+}
+
+@media (max-width: 1400px) {
+  .dashboard .card.big-number .formatted-number,
+  .dashboard .card.big-number .formatted-number .number,
+  .dashboard .card.big-number .content,
+  .dashboard .card.big-number .content .number {
+    font-size: 2.75rem !important;
+  }
+}
+
+.dashboard .card.big-number .label {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  margin-top: 6px !important;
+  letter-spacing: 0.02em !important;
+  opacity: 0.9 !important;
+}
+
+/* 2. Cards com Múltiplos Números / Summary Numbers (ex: Status, Fabricantes, Locais) */
+.dashboard .card.summary-numbers .table .line .content,
+.dashboard .card.multiple-numbers .table .line .content,
+.dashboard .summary-numbers .content,
+.dashboard .multiple-numbers .content,
+.dashboard .summary-numbers .number,
+.dashboard .multiple-numbers .number {
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.dashboard .card.summary-numbers .table .line .label,
+.dashboard .card.multiple-numbers .table .line .label,
+.dashboard .summary-numbers .label,
+.dashboard .multiple-numbers .label {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+}
+
+/* 3. Títulos e Ícones dos Cards do Dashboard */
+.dashboard .main-label {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+.dashboard .main-icon {
+  font-size: 3.2rem !important;
+  opacity: 0.25 !important;
+}
+
+
+/* ==========================================================================
+   FIGMA DASHBOARD SUPORTE - DESIGN SYSTEM OVERRIDES (GLPI / MY DASHBOARD)
+   ========================================================================== */
+body.central, body.helpdesk, body #page {
+  background-color: #F8FAFC !important;
+}
+
+/* Redesign dos Cards Nativos de Dashboard (central.php, dashboard_helpdesk, dashboard_assets) */
+.dashboard .card,
+#page .dashboard .card,
+.my-dashboard-grid .card,
+.grid-stack-item-content {
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  border: 1px solid #EDF2F7 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.dashboard .card:hover,
+#page .dashboard .card:hover {
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08) !important;
+  border-color: #CBD5E1 !important;
+}
+
+.dashboard .card .card-header,
+#page .dashboard .card .card-header {
+  background: transparent !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  padding: 16px 20px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: #0F172A !important;
+}
+
+/* Tipografia refinada nos Big Numbers */
+.dashboard .card.big-number .formatted-number .number,
+.dashboard .card.big-number .content .number {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* Badges e tags estilo Figma */
+.badge.bg-blue-lt, .badge-level-n2 {
+  background-color: #EEF2FF !important;
+  color: #6366F1 !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
+
+.badge.bg-red-lt, .badge-level-n3 {
+  background-color: #FFF1F2 !important;
+  color: #F43F5E !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
+
+/* Tabelas estilo Figma */
+.table.table-vcenter th {
+  background: #F8FAFC !important;
+  color: #64748B !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid #EDF2F7 !important;
+}
+
+.table.table-vcenter td {
+  border-bottom: 1px solid #F8FAFC !important;
+  color: #334155 !important;
+  padding: 12px 16px !important;
+}

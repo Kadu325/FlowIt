@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="trophyGold" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </radialGradient>
+    <radialGradient id="cupBase" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#713f12"/>
+    </radialGradient>
+    <filter id="shadowTrophy" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#a16207" flood-opacity="0.32"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <!-- Sombra Projetada Inferior -->
+  <ellipse cx="60" cy="106" rx="34" ry="7" fill="#713f12" opacity="0.25" filter="blur(6px)"/>
+
+  <!-- Alças Laterais da Taça 3D -->
+  <path d="M 36 38 C 22 38, 20 60, 38 64" fill="none" stroke="#ca8a04" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 84 38 C 98 38, 100 60, 82 64" fill="none" stroke="#ca8a04" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Corpo Principal da Taça 3D -->
+  <g filter="url(#shadowTrophy)">
+    <!-- Base da Taça -->
+    <rect x="42" y="86" width="36" height="12" rx="4" fill="url(#cupBase)"/>
+    <rect x="52" y="74" width="16" height="14" rx="3" fill="#a16207"/>
+    <!-- Cálice -->
+    <path d="M 34 30 C 34 62, 50 76, 60 76 C 70 76, 86 62, 86 30 Z" fill="url(#trophyGold)"/>
+    <!-- Borda Superior -->
+    <ellipse cx="60" cy="30" rx="26" ry="6" fill="#fef08a"/>
+    <!-- Brilho no Cálice -->
+    <path d="M 40 34 C 42 50, 48 60, 54 66 C 48 58, 44 46, 42 34 Z" fill="#ffffff" opacity="0.6"/>
+    <!-- Estrela Central no Cálice -->
+    <path d="M 60 44 L 62 49 L 67 50 L 63 54 L 64 59 L 60 56 L 56 59 L 57 54 L 53 50 L 58 49 Z" fill="#ffffff" opacity="0.95"/>
+  </g>
+</svg>
